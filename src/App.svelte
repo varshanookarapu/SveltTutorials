@@ -23,7 +23,7 @@
 <main class="container mt-5">
   <div class="d-flex gap-4 flex-wrap">
     {#each shows as show}
-      <TvShow />
+      <TvShow show={show.show} />
     {/each}
   </div>
 </main>
