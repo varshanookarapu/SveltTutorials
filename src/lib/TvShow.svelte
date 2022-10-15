@@ -11,8 +11,10 @@
       <span class="badge text-bg-primary me-1">{genre}</span>
     {/each}
     <p class="card-text">{show.language}</p>
+    <!-- {#if show.rating.average===null} -->
     <span>Rating: {show.rating.average}</span>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <!-- {/if} -->
+    <a href={show.url} class="btn btn-primary" target="_blank">Go to Show!!</a>
   </div>
 </div>
 
@@ -21,5 +23,13 @@
     width: 18rem;
     box-shadow: rgb(0 0 0) 6px 7px 11px;
     border: 0;
+    transform: scale(0.9);
+    transition: all 0.5s ease-out;
+  }
+
+  .card:hover {
+    background-color: rgb(240, 240, 129);
+    opacity: 3;
+    transform: scale(1);
   }
 </style>
